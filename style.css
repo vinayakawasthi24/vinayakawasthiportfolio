@@ -1,4 +1,6 @@
-/* General Styles */
+/* ============================= */
+/* GENERAL STYLES */
+/* ============================= */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -21,7 +23,7 @@ nav {
   top: 0;
   z-index: 1000;
   transition: background 0.5s ease-in-out, padding 0.5s;
-   font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 nav.scrolled {
@@ -29,11 +31,12 @@ nav.scrolled {
   padding: 12px 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 nav .logo img {
   height: 80px;
   transition: color 0.3s;
-
 }
+
 nav .logo:hover {
   color: #fff;
 }
@@ -46,9 +49,11 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
 nav ul li {
-  display: inline-block;
+  display: inline;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #ffcc00;
@@ -58,16 +63,26 @@ nav ul li a {
   border-radius: 5px;
   font-size: 18px;
 }
-nav ul li a:hover, .active {
+
+nav ul li a:hover,
+.active {
   background: #ffcc00;
   color: #000;
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: #ffcc00;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 /* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
-
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -76,15 +91,18 @@ nav ul li a:hover, .active {
   background: linear-gradient(rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.355)), 
               url('image/bg.jpg') no-repeat center/cover;
 }
+
 .hero-content h1 {
-    font-family: 'Great Vibes', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 70px;
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 .hero-content span {
   color: #ffcc00;
 }
+
 .hero .highlight {
   background: #ffcc00;
   padding: 5px 12px;
@@ -107,20 +125,84 @@ nav ul li a:hover, .active {
   box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
   margin-top: 20px;
 }
+
 .blog-btn:hover {
   background: #e6b800;
   transform: scale(1.05);
 }
 
 /* About Section */
-.about {
+.about,
+.about2 {
+  color: #fff;
   padding: 80px 50px;
-  background: #111;
   text-align: center;
+  font-family: 'Exo 2', sans-serif;
 }
-.about h2 {
-  font-size: 38px;
+
+.about {
+  background: linear-gradient(to left, #531360, #070017);
+}
+
+.about2 {
+  background: linear-gradient(to left, #531360, #070017);
+}
+
+.about h2,
+.about2 h2 {
   color: #ffcc00;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-text .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.about-text .btn:hover {
+  background: #e6b800;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(146, 6, 132, 0.3);
 }
 
 /* Portfolio Section */
@@ -129,6 +211,7 @@ nav ul li a:hover, .active {
   background: #222;
   text-align: center;
 }
+
 .portfolio h2 {
   font-size: 36px;
   color: #ffcc00;
@@ -138,6 +221,7 @@ nav ul li a:hover, .active {
 .portfolio .filter {
   margin-bottom: 20px;
 }
+
 .portfolio .filter button {
   padding: 10px 20px;
   border: none;
@@ -149,7 +233,9 @@ nav ul li a:hover, .active {
   border-radius: 5px;
   font-size: 16px;
 }
-.portfolio .filter .active, .portfolio .filter button:hover {
+
+.portfolio .filter .active,
+.portfolio .filter button:hover {
   background: #ffcc00;
   color: #000;
 }
@@ -160,17 +246,20 @@ nav ul li a:hover, .active {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 .gallery .item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s;
 }
+
 .gallery .item img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
+
 .gallery .item:hover {
   transform: scale(1.05);
 }
@@ -188,6 +277,7 @@ nav ul li a:hover, .active {
   font-weight: bold;
   color: #000;
 }
+
 .load-more:hover {
   background: #e6b800;
   transform: scale(1.05);
@@ -195,277 +285,30 @@ nav ul li a:hover, .active {
 
 /* Footer */
 .footer {
-  background: #000000;
+  background: #000;
   padding: 20px;
   text-align: center;
-  color: #000000;
+  color: #fff;
   margin-top: 50px;
 }
-.footer p {
-  margin: 0;
-}
-
-
-
-
-/* About Section */
-.about {
-  
-  background: linear-gradient(to left, #531360, #070017);
-  color: #fff;
-  padding: 80px 50px;
-  text-align: center;
-}
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-.about-text {
-  flex: 1;
-  max-width: 600px;
-  text-align: left;
-}
-.about-text h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-.about-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-.about-text .btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-}
-.about-text .btn:hover {
-  background: #e6b800;
-}
-.about-image {
-  flex: 1;
-  max-width: 400px;
-}
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.3);
-}
-
-
-.about2 {
-  background: linear-gradient(to left, #531360, #070017);
-
-  color: #fff;
-  padding: 80px 50px;
-  text-align: center;
-  font-family: 'Exo 2', sans-serif;
-}
-
-.about2 h2 {
-  font-size: 80px;
-  color: #e6b800;
-}
-
-.about2 p {
-  font-size: 20px;
-
-}
-
-
-
 
 /* ============================= */
-/* RESPONSIVE DESIGN ADJUSTMENTS */
+/* RESPONSIVE DESIGN */
 /* ============================= */
 
 /* Medium Devices (Tablets) */
 @media (max-width: 1024px) {
-  nav {
-    padding: 15px 30px;
-  }
-
-  nav .logo img {
-    height: 60px;
-  }
-
-  nav ul {
-    gap: 10px;
-  }
-
-  .hero-content h1 {
-    font-size: 55px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-image {
-    max-width: 350px;
-  }
-
-  .portfolio .filter button {
-    font-size: 15px;
-    padding: 8px 15px;
-  }
+  nav { padding: 15px 30px; }
+  nav .logo img { height: 40px; }
+  nav ul { gap: 10px; }
+  .hero-content h1 { font-size: 55px; }
+  .portfolio .filter button { font-size: 15px; padding: 8px 15px; }
 }
 
 /* Small Devices (Mobile Landscape) */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    margin-top: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 12px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 45px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-  }
-
-  .about2 h2 {
-    font-size: 50px;
-  }
-
-  .about2 p {
-    font-size: 18px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-}
-
-/* Extra Small Devices (Phones) */
-@media (max-width: 480px) {
-  nav {
-    padding: 10px 15px;
-  }
-
-  nav .logo img {
-    height: 50px;
-  }
-
-  .hero-content h1 {
-    font-size: 35px;
-  }
-
-  .blog-btn,
-  .load-more {
-    padding: 10px 18px;
-    font-size: 16px;
-  }
-
-  .about-text h2 {
-    font-size: 28px;
-  }
-
-  .about-text p {
-    font-size: 15px;
-  }
-
-  .about2 h2 {
-    font-size: 40px;
-  }
-
-  .about2 p {
-    font-size: 16px;
-  }
-
-  .portfolio h2 {
-    font-size: 30px;
-  }
-
-  .filter button {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-/* ============================= */
-/* TOGGLE (HAMBURGER) MENU */
-/* ============================= */
-
-/* Toggle Button Styling */
-/* Navbar flex layout */
-/* Navbar base */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.9);
-  z-index: 9999;
-}
-
-/* Hamburger Toggle using ☰ */
-.menu-toggle {
-  display: none;       /* hidden on desktop */
-  font-size: 32px;     /* size of ☰ */
-  color: #ffcc00;      /* yellow */
-  cursor: pointer;
-  margin-left: 200px;   /* push to right of logo */
-  z-index: 10000;      /* above nav items */
-}
-
-/* Show toggle only on mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
+  nav { flex-direction: column; align-items: flex-start; padding: 15px 20px; }
+  .menu-toggle { display: block; }
   nav ul {
     position: absolute;
     top: 100%;
@@ -477,19 +320,40 @@ nav {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out;
-    z-index: 9998;
   }
-
-  nav ul.show {
-    max-height: 500px;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,204,0,0.2);
-  }
+  nav ul.show { max-height: 500px; }
+  nav ul li a { display: block; width: 100%; text-align: center; padding: 15px 0; border-bottom: 1px solid rgba(255,204,0,0.2); }
+  .hero { padding: 60px 20px; }
+  .hero-content h1 { font-size: 45px; }
+  .about-text p { font-size: 16px; }
+  .about2 h2 { font-size: 50px; }
+  .about2 p { font-size: 18px; }
+  .gallery { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
 
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+  nav { padding: 10px 15px; }
+  nav .logo img { height: 50px; }
+  .hero-content h1 { font-size: 35px; }
+  .blog-btn, .load-more { padding: 10px 18px; font-size: 16px; }
+  .about-text h2 { font-size: 28px; }
+  .about-text p { font-size: 15px; }
+  .about2 h2 { font-size: 40px; }
+  .about2 p { font-size: 16px; }
+  .portfolio h2 { font-size: 30px; }
+  .filter button { font-size: 14px; padding: 8px 12px; }
+  .gallery { grid-template-columns: 1fr; }
+}
+  .about-container {
+    flex-direction: column; /* stack elements vertically */
+  }
+
+  .about-image {
+    order: 2; /* make image come after text */
+    max-width: 100%; /* ensure full width */
+  }
+
+  .about-text {
+    order: 1; /* text comes first */
+  }
