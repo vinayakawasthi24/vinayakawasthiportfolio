@@ -456,7 +456,7 @@ nav {
   font-size: 32px;     /* size of ☰ */
   color: #ffcc00;      /* yellow */
   cursor: pointer;
-  margin-left: auto;   /* push to right of logo */
+  margin-left: 200px;   /* push to right of logo */
   z-index: 10000;      /* above nav items */
 }
 
