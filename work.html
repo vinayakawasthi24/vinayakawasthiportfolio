@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORK</title>
+  <link rel="stylesheet" href="work.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <!-- Import the Exo 2 font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 class="fade-in">My Work Showcase</h1>
+  </header>
+
+  <section class="work-container">
+    <div class="work-item">
+      <h2>📖 Magazine Designs</h2>
+      <a href="https://www.canva.com/design/DAGhsc7u9cY/EbmElo9ncAqfclbA_pCAig/edit?utm_content=DAGhsc7u9cY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+        class="btn">
+        View Designs
+      </a>
+    </div>
+
+    <div class="work-item">
+      <h2>💻 Website Projects</h2>
+      <a href="#webdesigns" class="btn">Explore Websites</a>
+    </div>
+  </section>
+
+  <script>
+    gsap.from(".fade-in", { 
+      opacity: 0, 
+      y: -50, 
+      duration: 1.2, 
+      ease: "power2.out"
+    });
+
+    gsap.from(".work-item", {
+      opacity: 0,
+      y: 30,
+      duration: 1.2,
+      stagger: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".work-container",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <title>ABOUT</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+
+   <nav>
+            <div class="logo"><img src="image/hii.png" alt="logo"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Blog">Blog</a></li>
+                
+            </ul>
+        </nav>
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About <span class="highlight">Me</span></h2>
+        <p>
+          I'm <strong>Vinayak Awasthi</strong>, a passionate <strong>Frontend Developer</strong> & 
+          <strong>Graphic Designer</strong> who loves blending creativity with technology.
+        </p>
+        <p>
+          I specialize in crafting interactive, user-friendly websites and visually appealing designs that leave a lasting impression. 
+          My expertise lies in modern web development, UI/UX design, and branding, ensuring a seamless and engaging user experience.
+        </p>
+        <p>
+          Currently, I’m working as a designer for Anunad Magazine of UIT RGPV, where I blend creativity with technical skills to produce compelling visuals. 
+          While pursuing a B.Tech in Electrical Engineering, I’m actively honing my skills in frontend web development and graphic design, aiming to bridge technology with aesthetics.
+        </p>
+        <p>
+          Driven by a passion for innovation and problem-solving, I constantly explore new trends and technologies to enhance my craft. 
+          Whether it's building a sleek website or designing a standout brand identity, I strive to deliver excellence in every project.
+        </p>
+        <p>
+          Let's build something amazing together! 🚀
+        </p>
+        <a href="contact.html" class="btn">Let's Connect</a>
+      </div>
+      <div class="about-image">
+        <img src="image/myimg.jpg" alt="Vinayak Awasthi">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-text", { 
+      opacity: 0, 
+      x: -50, 
+      duration: 1.5, 
+      scrollTrigger: { 
+        trigger: ".about-text", 
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    gsap.from(".about-image img", { 
+      opacity: 0, 
+      scale: 0.8, 
+      duration: 1.5, 
+      scrollTrigger: { 
+        trigger: ".about-image img", 
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    gsap.from(".btn", { 
+      opacity: 0, 
+      y: 20, 
+      duration: 1, 
+      delay: 0.5, 
+      ease: "bounce", 
+      scrollTrigger: {
+        trigger: ".btn",
+        start: "top 90%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  </script>
+
+</body>
+</html>

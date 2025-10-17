@@ -1,0 +1,66 @@
+/* General Page Styling */
+body {
+ font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  padding: 0;
+    background: linear-gradient(to left, #531360, #070017);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 30px 0;
+  background: #000000;
+  box-shadow: 0px 4px 10px rgba(8, 8, 8, 0.234);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #ffcc00;
+}
+
+.work-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+.work-item {
+  background: #29293d;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #24243e;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #ffdd44;
+  transform: scale(1.05);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  
+  <style>
+    /* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+       background: linear-gradient(to left, #531360, #070017);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #ffcc00;
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Button Styles */
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #ffcc00;
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
+    }
+
+    .btn:hover {
+        background: #e6b800;
+        transform: scale(1.05);
+    }
+
+    /* Instagram Section */
+    .instagram {
+        margin-top: 20px;
+    }
+
+    .insta-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #ffcc00;
+        font-weight: bold;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .insta-link:hover {
+        transform: scale(1.1);
+    }
+
+    .insta-logo {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .insta-link:hover .insta-logo {
+        transform: rotate(15deg);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 class="fade-in">Get in Touch</h1>
+
+  <div class="contact-container">
+    <a href="mailto:awasthivinayak111@gmail.com" class="btn">📧 Contact Me</a>
+    
+    <div class="instagram">
+      <a href="https://www.instagram.com/awasthixvinayak/" class="insta-link" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="insta-logo">
+        Follow Me on Instagram
+      </a>
+    </div>
+<div class="linkedin">
+  <a href="https://in.linkedin.com/in/vinayak-awasthi-6965b52b8" class="insta-link" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" 
+         alt="LinkedIn" 
+         class="insta-logo">
+    Connect with Me on LinkedIn
+  </a>
+</div>
+
+
+  </div>
+
+  <script>
+    gsap.from(".fade-in", { opacity: 0, y: -50, duration: 1.2, ease: "power2.out" });
+    gsap.from(".btn", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5, ease: "bounce" });
+    gsap.from(".insta-link", { opacity: 0, x: -30, duration: 1, delay: 0.7, ease: "power2.out" });
+  </script>
+
+</body>
+</html>

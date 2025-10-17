@@ -1,0 +1,94 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Logo img {
+  width: 150px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header ul li {
+  display: flex;
+  align-items: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #ff3d00;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  color: black;
+}
+
+/* Hero Section */
+section:first-child {
+  background: url("img/bg.abif.avif") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.png-image {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+section:first-child p {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+section:nth-child(2) {
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  width: 50%;
+  padding: 12px;
+  border: 2px solid #ff3d00;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border-color: black;
+  transition: 0.3s;
+}
+
+/* Footer */
+footer {
+  background: #ff3d00;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
